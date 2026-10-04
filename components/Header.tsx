@@ -51,16 +51,16 @@ function SolutionsMenu() {
         aria-expanded={open}
         aria-controls="solutions-menu"
         onClick={() => setOpen((v) => !v)}
-        className="group/plus ml-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-forest/30 text-forest transition-colors duration-200 hover:border-forest hover:bg-sprout aria-expanded:border-forest aria-expanded:bg-sprout"
+        className="group/plus ml-1 flex h-6 w-6 items-center justify-center text-forest"
       >
         <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           viewBox="0 0 12 12"
           aria-hidden="true"
           className="plus-icon transition-transform duration-300 ease-out group-hover/sol:rotate-45 group-hover/plus:rotate-45 group-aria-expanded/plus:rotate-45"
         >
-          <path d="M6 1.5v9M1.5 6h9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M6 1.2v9.6M1.2 6h9.6" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
         </svg>
       </button>
       {open && (
@@ -69,11 +69,6 @@ function SolutionsMenu() {
           className="absolute left-0 top-full z-50 w-72 pt-2"
         >
           <ul className="rounded-xl border border-line bg-paper p-2 shadow-lg">
-            <li>
-              <a href="/solutions/" className="block rounded-lg px-3 py-2 text-sm font-medium hover:bg-sprout">
-                All solutions
-              </a>
-            </li>
             {solutionsNav.map((s) => (
               <li key={s.slug}>
                 <a
