@@ -208,7 +208,7 @@ export default function Home() {
               </p>
             </article>
             <article className={card}>
-              <p className="text-sm font-medium text-forest">For PE firms</p>
+              <p className="text-sm font-medium text-forest">Multiple companies</p>
               <h3 className="h3 mt-2">Repeat across the portfolio</h3>
               <p className="mt-3 text-ink">
                 We reuse what worked at one company in the next, faster and cheaper each time.
@@ -366,7 +366,7 @@ export default function Home() {
           </ul>
         </Section>
 
-        {/* 7. For PE firms */}
+        {/* 7. Portfolio */}
         <Section id="portfolio" tone="canvas">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>

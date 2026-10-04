@@ -8,7 +8,7 @@ const links = [
   { href: "/#work", label: "Work" },
   { href: "/#how", label: "How it works" },
   { href: "/#why", label: "Why Paradigm" },
-  { href: "/#portfolio", label: "For PE firms" },
+  { href: "/#portfolio", label: "Portfolios" },
   { href: "/#faq", label: "FAQ" },
 ];
 
