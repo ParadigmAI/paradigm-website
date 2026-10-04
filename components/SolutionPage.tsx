@@ -32,7 +32,7 @@ export function SolutionPage({ s }: { s: Solution }) {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
         { "@type": "ListItem", position: 2, name: "Solutions", item: `${SITE_URL}/solutions/` },
-        { "@type": "ListItem", position: 3, name: s.cardTitle, item: url },
+        { "@type": "ListItem", position: 3, name: s.name, item: url },
       ],
     },
   ];
@@ -48,10 +48,16 @@ export function SolutionPage({ s }: { s: Solution }) {
               items={[
                 { label: "Home", href: "/" },
                 { label: "Solutions", href: "/solutions/" },
-                { label: s.cardTitle },
+                { label: s.name },
               ]}
             />
-            <h1 className="h1 mt-10 max-w-3xl">{s.headline}</h1>
+            <p className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span className="rounded-full bg-sprout px-3 py-1 text-sm font-medium text-forest">
+                {s.name}
+              </span>
+              <span className="text-sm text-ink">for {s.industry.toLowerCase()}</span>
+            </p>
+            <h1 className="h1 mt-5 max-w-3xl">{s.headline}</h1>
             <p className="mt-5 max-w-2xl text-lg text-ink">{s.metaDescription}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="btn btn-primary">

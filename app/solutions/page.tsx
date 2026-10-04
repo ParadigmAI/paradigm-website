@@ -52,7 +52,8 @@ export default function SolutionsIndex() {
                   className="group block h-full rounded-card border border-line bg-paper p-6 transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-growth hover:bg-sprout sm:p-8"
                 >
                   <span aria-hidden="true" className="mini-dot mb-4 block h-3 w-3 rounded-full bg-leaf" />
-                  <h2 className="h3">{s.cardTitle}</h2>
+                  <p className="text-sm text-ink">For {s.industry.toLowerCase()}</p>
+                  <h2 className="h3 mt-1">{s.name}</h2>
                   <p className="mt-2 text-ink">{s.cardText}</p>
                   <span className="mt-5 inline-block text-sm font-medium text-forest group-hover:underline">
                     See what we build

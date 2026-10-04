@@ -17,7 +17,10 @@ export type MockKind = "rfq" | "invoice" | "packet" | "pipeline";
 export type Solution = {
   slug: "job-shops" | "logistics" | "solar-installers" | "biotech-data";
   indexable: boolean;
-  cardTitle: string;
+  /** Product-style name used in the menu, cards, footer and breadcrumbs. */
+  name: string;
+  /** Who it is for (the industry label). */
+  industry: string;
   cardText: string;
   seoTitle: string;
   metaDescription: string;
@@ -40,7 +43,8 @@ export const solutions: Solution[] = [
   {
     slug: "job-shops",
     indexable: true,
-    cardTitle: "Job shops and machine shops",
+    name: "Quoteline",
+    industry: "Job shops and machine shops",
     cardText: "Turn RFQ emails and drawings into draft quotes in minutes.",
     seoTitle: "RFQ to Quote Automation for Job Shops | Paradigm",
     metaDescription:
@@ -93,7 +97,8 @@ export const solutions: Solution[] = [
   {
     slug: "logistics",
     indexable: true,
-    cardTitle: "Freight, customs and distribution",
+    name: "Paperflow",
+    industry: "Freight, customs and distribution",
     cardText: "Stop re-typing invoices, entries and bills into your system.",
     seoTitle: "Document Automation for Freight, Customs and Distribution | Paradigm",
     metaDescription:
@@ -146,7 +151,8 @@ export const solutions: Solution[] = [
   {
     slug: "solar-installers",
     indexable: false,
-    cardTitle: "Solar installers",
+    name: "Packet Ready",
+    industry: "Solar installers",
     cardText: "Cut the interconnection and permit paperwork per project.",
     seoTitle:
       "Interconnection and Permit Paperwork Automation for Solar Installers | Paradigm",
@@ -196,7 +202,8 @@ export const solutions: Solution[] = [
   {
     slug: "biotech-data",
     indexable: false,
-    cardTitle: "Small biotech and diagnostics",
+    name: "LabFlow",
+    industry: "Small biotech and diagnostics",
     cardText: "Clean, connected data and analysis pipelines without hiring a team.",
     seoTitle: "Data Engineering Sprints for Small Biotech | Paradigm",
     metaDescription:

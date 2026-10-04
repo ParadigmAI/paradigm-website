@@ -26,6 +26,7 @@ Next.js App Router (TypeScript), static export (`output: "export"`, `trailingSla
 - All buttons read "Talk to our team" and go to `/#contact`. No email address is shown.
 
 ## Solutions section
+Solutions have names: Quoteline (job-shops), Paperflow (logistics), Packet Ready (solar-installers), LabFlow (biotech-data). Names live in `lib/solutions.ts` (`name`, `industry`) and `lib/solutionsNav.ts`; slugs and SEO titles stay industry-based. The names are not trademark-checked.
 Pre-product framing: pages describe what we build, never what exists. Use "we build", "pilot", "design partner"; never "live", "deployed", "customers", "trusted by". Each page has an example flow and a mock screen labelled "Illustrative concept, sample data". No results, metrics or delivery-proof block appear on these pages (removed at the owner's request). Pricing text stays hidden until `PRICE_BAND_APPROVED` is set to true in `lib/solutions.ts`. `solar-installers` and `biotech-data` are `noindex` and are left out of `public/sitemap.xml` until approved. Solution-page forms add a hidden `topic` (the slug) and an optional "What document or process takes the most time?" field.
 
 ## Design
