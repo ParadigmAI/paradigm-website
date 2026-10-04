@@ -13,7 +13,7 @@ function BookButton({ className = "" }: { className?: string }) {
       {...(bookExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={`btn btn-primary ${className}`}
     >
-      Book a 30-minute call
+      Book a call
     </a>
   );
 }
@@ -165,9 +165,7 @@ export default function Home() {
                 See our work
               </a>
             </div>
-            <p className="mt-6 text-sm text-ink">
-              A team of 20 engineers. Clients include Skillful.ly and Awesome Motive.
-            </p>
+            <p className="mt-6 text-sm text-ink">A team of 20 engineers.</p>
             <div className="mt-14">
               <Orbs />
             </div>
@@ -282,16 +280,7 @@ export default function Home() {
             </article>
 
             <article className={card}>
-              <h3 className="h3">
-                <a
-                  href="https://awesomemotive.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link"
-                >
-                  Awesome Motive
-                </a>
-              </h3>
+              <h3 className="h3">Awesome Motive</h3>
               <dl className="mt-5 space-y-4 text-ink">
                 <div>
                   <dt className="text-sm font-medium text-carbon">Problem</dt>
@@ -419,7 +408,7 @@ export default function Home() {
         {/* 8. Lab */}
         <Section id="lab">
           <div className="rounded-card border border-line bg-paper p-8 sm:p-10">
-            <p className="inline-block rounded-full bg-mist px-3 py-1 text-sm font-medium text-carbon">
+            <p className="inline-block rounded-full bg-sprout px-3 py-1 text-sm font-medium text-forest">
               Pre-launch
             </p>
             <h2 className="h2 mt-4">From our lab: Montaa</h2>

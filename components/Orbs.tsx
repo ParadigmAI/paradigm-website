@@ -1,8 +1,8 @@
 const orbs = [
-  { size: 64, bg: "radial-gradient(circle at 32% 28%, #ffffff 0%, #d1e2e8 38%, #99b0c8 100%)" },
+  { size: 64, bg: "radial-gradient(circle at 32% 28%, #ffffff 0%, #e2f5da 38%, #abd49e 100%)" },
   { size: 96, bg: "radial-gradient(circle at 34% 28%, #f4f4f1 0%, #abd49e 45%, #309d4b 100%)" },
   { size: 136, bg: "radial-gradient(circle at 36% 28%, #ffffff 0%, #abd49e 40%, #5db368 72%, #004e23 100%)" },
-  { size: 96, bg: "radial-gradient(circle at 34% 28%, #f4f4f1 0%, #d1e2e8 45%, #7a92a8 100%)" },
+  { size: 96, bg: "radial-gradient(circle at 34% 28%, #f4f4f1 0%, #ceecbf 45%, #5db368 100%)" },
   { size: 64, bg: "radial-gradient(circle at 32% 28%, #ffffff 0%, #e2f5da 40%, #abd49e 100%)" },
 ];
 

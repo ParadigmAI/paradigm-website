@@ -23,4 +23,4 @@ The custom domain is set by `public/CNAME`.
 ## Configuration
 
 `lib/site.ts` holds the booking link and the contact form ID. While `BOOKING_URL` is empty,
-the "Book a 30-minute call" buttons point to the contact form.
+the "Book a call" buttons point to the contact form.

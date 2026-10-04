@@ -19,7 +19,7 @@ GitHub Pages has no backend. The contact form posts to Formspree via `@formspree
 - No email address is shown on the site.
 
 ## Booking link
-`BOOKING_URL` in `lib/site.ts` is empty until the owner supplies a Google Calendar appointment scheduling link. While empty, all "Book a 30-minute call" buttons go to `/#contact`.
+`BOOKING_URL` in `lib/site.ts` is empty until the owner supplies a Google Calendar appointment scheduling link. While empty, all "Book a call" buttons go to `/#contact`.
 
 ## Navigation
 Internal links are absolute (`/#section`, `/privacy/`) so they work from legal pages.

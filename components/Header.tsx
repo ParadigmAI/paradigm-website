@@ -33,7 +33,7 @@ export function Header() {
             {...(bookExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             className="btn btn-primary hidden !h-10 sm:inline-flex"
           >
-            Book a 30-minute call
+            Book a call
           </a>
           <button
             type="button"
@@ -67,7 +67,7 @@ export function Header() {
                 className="btn btn-primary w-full"
                 onClick={() => setOpen(false)}
               >
-                Book a 30-minute call
+                Book a call
               </a>
             </li>
           </ul>
