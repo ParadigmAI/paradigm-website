@@ -3,6 +3,12 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { FORMSPREE_FORM_ID } from "@/lib/site";
 
+const Req = () => (
+  <span aria-hidden="true" className="text-forest">
+    {" "}*
+  </span>
+);
+
 const field =
   "mt-1.5 block w-full rounded-lg border border-line bg-paper px-3.5 py-2.5 text-base text-carbon";
 
@@ -26,12 +32,14 @@ export function ContactForm() {
         <div>
           <label htmlFor="name" className="text-sm font-medium">
             Name
+            <Req />
           </label>
           <input id="name" name="name" type="text" required autoComplete="name" className={field} />
         </div>
         <div>
           <label htmlFor="email" className="text-sm font-medium">
             Email
+            <Req />
           </label>
           <input id="email" name="email" type="email" required autoComplete="email" className={field} />
           <ValidationError field="email" prefix="Email" errors={state.errors} className="mt-1 block text-sm text-red-700" />
@@ -39,6 +47,7 @@ export function ContactForm() {
         <div>
           <label htmlFor="company" className="text-sm font-medium">
             Company
+            <Req />
           </label>
           <input id="company" name="company" type="text" required autoComplete="organization" className={field} />
         </div>
@@ -46,16 +55,23 @@ export function ContactForm() {
           <label htmlFor="role" className="text-sm font-medium">
             Role
           </label>
-          <input id="role" name="role" type="text" required autoComplete="organization-title" className={field} />
+          <input id="role" name="role" type="text" autoComplete="organization-title" className={field} />
         </div>
       </div>
       <div>
         <label htmlFor="problem" className="text-sm font-medium">
-          The one process that costs you the most time
+          Anything you would like us to know
         </label>
-        <textarea id="problem" name="message" rows={3} required className={field} />
+        <textarea id="problem" name="message" rows={3} className={field} />
         <ValidationError field="message" prefix="Message" errors={state.errors} className="mt-1 block text-sm text-red-700" />
       </div>
+
+      <p className="text-sm text-ink">
+        <span aria-hidden="true" className="text-forest">
+          *
+        </span>{" "}
+        Required
+      </p>
 
       {/* Spam trap: hidden from people, bots tend to fill it in. */}
       <input
