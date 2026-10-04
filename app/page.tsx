@@ -62,10 +62,6 @@ const steps = [
 
 const why = [
   {
-    t: "A team of 20 engineers",
-    d: "Enough depth to take an idea from audit to production without handing it to someone else.",
-  },
-  {
     t: "We build for production, not demos",
     d: "The goal is a system your team uses on Monday, not a prototype for a board meeting.",
   },
@@ -165,7 +161,6 @@ export default function Home() {
                 See our work
               </a>
             </div>
-            <p className="mt-6 text-sm text-ink">A team of 20 engineers.</p>
             <div className="mt-14">
               <Orbs />
             </div>
@@ -361,7 +356,7 @@ export default function Home() {
         {/* 6. Why Paradigm */}
         <Section id="why">
           <h2 className="h2">What you can count on</h2>
-          <ul className="mt-10 grid gap-5 md:grid-cols-2">
+          <ul className="mt-10 grid gap-5 md:grid-cols-3">
             {why.map((w) => (
               <li key={w.t} className={card}>
                 <h3 className="h3">{w.t}</h3>
