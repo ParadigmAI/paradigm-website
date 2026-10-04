@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { caseStudies } from "@/lib/caseStudies";
 
-const MONTAA_URL = "https://miranthajayatilake.github.io/montaa/";
+const MONTAA_URL = "https://paradigmai.github.io/montaa/";
 
 function TalkButton({ className = "" }: { className?: string }) {
   return (
