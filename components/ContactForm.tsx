@@ -12,7 +12,13 @@ const Req = () => (
 const field =
   "mt-1.5 block w-full rounded-lg border border-line bg-paper px-3.5 py-2.5 text-base text-carbon";
 
-export function ContactForm() {
+export function ContactForm({
+  topic,
+  processField = false,
+}: {
+  topic?: string;
+  processField?: boolean;
+}) {
   const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID);
 
   if (state.succeeded) {
@@ -58,6 +64,15 @@ export function ContactForm() {
           <input id="role" name="role" type="text" autoComplete="organization-title" className={field} />
         </div>
       </div>
+      {processField && (
+        <div>
+          <label htmlFor="process" className="text-sm font-medium">
+            What document or process takes the most time?
+          </label>
+          <input id="process" name="process" type="text" className={field} />
+        </div>
+      )}
+      {topic && <input type="hidden" name="topic" value={topic} />}
       <div>
         <label htmlFor="problem" className="text-sm font-medium">
           Anything you would like us to know

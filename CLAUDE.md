@@ -12,6 +12,8 @@ Next.js App Router (TypeScript), static export (`output: "export"`, `trailingSla
 - `components/`: `Header` (client), `Hero`, `CaseStudyCard` (client), `ContactForm` (client), `Footer`, `LegalPage`
 - `lib/site.ts`: site URL, name, Formspree form ID
 - `lib/caseStudies.ts`: case study data (text and numbers)
+- `lib/solutions.ts`: copy for /solutions and the four industry pages (server only); `lib/solutionsNav.ts`: slim list for header/footer
+- `app/solutions/page.tsx` and `app/solutions/[slug]/page.tsx`, `components/SolutionPage.tsx`, `ExampleFlow.tsx`, `Breadcrumb.tsx`, `PageSection.tsx`: Solutions section
 - `public/`: `CNAME`, `.nojekyll`, `robots.txt`, `sitemap.xml`, `og.png`
 - `.github/workflows/deploy.yml`: build and deploy to GitHub Pages on push to `main`
 
@@ -22,6 +24,9 @@ Next.js App Router (TypeScript), static export (`output: "export"`, `trailingSla
 - Testimonials are verbatim, title and company only.
 - Awesome Motive is not PE-owned. Case studies carry no external links. Montaa is pre-launch: no launch language, customers or results.
 - All buttons read "Talk to our team" and go to `/#contact`. No email address is shown.
+
+## Solutions section
+Pre-product framing: pages describe what we build, never what exists. Use "we build", "pilot", "design partner"; never "live", "deployed", "customers", "trusted by". Each page has an example flow and a mock screen labelled "Illustrative concept, sample data". The only claim is the delivery-proof line (60-70% in 12 weeks, anonymised), labelled as past delivery. Pricing text stays hidden until `PRICE_BAND_APPROVED` is set to true in `lib/solutions.ts`. `solar-installers` and `biotech-data` are `noindex` and are left out of `public/sitemap.xml` until approved. Solution-page forms add a hidden `topic` (the slug) and an optional "What document or process takes the most time?" field.
 
 ## Design
 Light theme, warm canvas and off-white surfaces, near-black text, one green accent. Buttons stay in `@layer components` so utilities can override them. Colour utilities need a token in `globals.css` (for example `--color-leaf`). No scroll-triggered content animation; hover states, the hero intro, floating orbs and the stat count-up only; all respect `prefers-reduced-motion`.
