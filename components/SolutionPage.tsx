@@ -5,8 +5,6 @@ import { PageSection } from "@/components/PageSection";
 import { ExampleFlow } from "@/components/ExampleFlow";
 import { ContactForm } from "@/components/ContactForm";
 import {
-  DELIVERY_PROOF,
-  DELIVERY_PROOF_LABEL,
   DESIGN_PARTNER_BLURB,
   faqsFor,
   type Solution,
@@ -117,19 +115,8 @@ export function SolutionPage({ s }: { s: Solution }) {
           </ul>
         </PageSection>
 
-        {/* Delivery proof */}
-        <PageSection>
-          <div className={card}>
-            <h2 className="h3">Delivery proof</h2>
-            <p className="mt-3 text-lg">{DELIVERY_PROOF}</p>
-            <p className="mt-2 text-sm text-ink">
-              {DELIVERY_PROOF_LABEL} {s.proofExtra}
-            </p>
-          </div>
-        </PageSection>
-
         {/* FAQ */}
-        <PageSection tone="canvas">
+        <PageSection>
           <h2 className="h2">Questions</h2>
           <div className="mt-8 max-w-3xl divide-y divide-line border-y border-line">
             {faqs.map((f) => (

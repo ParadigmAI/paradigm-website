@@ -288,6 +288,10 @@ details > summary::-webkit-details-marker {
   from { opacity: 0; transform: translateY(8px); }
 }
 @media (prefers-reduced-motion: reduce) {
+  .plus-icon {
+    transition: none !important;
+    transform: none !important;
+  }
   .case-orb,
   .case-panel {
     animation: none !important;

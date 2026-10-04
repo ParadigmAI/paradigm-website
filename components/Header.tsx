@@ -35,7 +35,7 @@ function SolutionsMenu() {
   return (
     <div
       ref={ref}
-      className="relative flex items-center"
+      className="group/sol relative flex items-center"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       onBlur={(e) => {
@@ -51,10 +51,16 @@ function SolutionsMenu() {
         aria-expanded={open}
         aria-controls="solutions-menu"
         onClick={() => setOpen((v) => !v)}
-        className="ml-1 rounded p-1 text-ink hover:text-carbon"
+        className="group/plus ml-1.5 flex h-6 w-6 items-center justify-center rounded-full border border-forest/30 text-forest transition-colors duration-200 hover:border-forest hover:bg-sprout aria-expanded:border-forest aria-expanded:bg-sprout"
       >
-        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
-          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          aria-hidden="true"
+          className="plus-icon transition-transform duration-300 ease-out group-hover/sol:rotate-45 group-hover/plus:rotate-45 group-aria-expanded/plus:rotate-45"
+        >
+          <path d="M6 1.5v9M1.5 6h9" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
         </svg>
       </button>
       {open && (

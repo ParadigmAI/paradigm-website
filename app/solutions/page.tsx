@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { PageSection } from "@/components/PageSection";
-import { DELIVERY_PROOF, DELIVERY_PROOF_LABEL, solutions, solutionsIndex as ix } from "@/lib/solutions";
+import { solutions, solutionsIndex as ix } from "@/lib/solutions";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -78,12 +78,7 @@ export default function SolutionsIndex() {
         </PageSection>
 
         <PageSection>
-          <div className={card}>
-            <h2 className="h3">Delivery proof</h2>
-            <p className="mt-3 text-lg">{DELIVERY_PROOF}</p>
-            <p className="mt-2 text-sm text-ink">{DELIVERY_PROOF_LABEL}</p>
-          </div>
-          <div className="mt-10 text-center">
+          <div className="text-center">
             <p className="font-display text-2xl">{ix.ctaLine}</p>
             <a href="/#contact" className="btn btn-primary mt-6">
               Talk to our team

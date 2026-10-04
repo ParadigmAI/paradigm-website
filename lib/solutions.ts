@@ -1,14 +1,12 @@
 // Solutions section copy. Source: owner's "Solutions section copy" file (v1 + v2 addendum).
-// Rules baked in: no personal names, no results beyond the delivery-proof line, pilot / design
-// partner wording, never "live", "deployed" or "customers". Pricing stays a placeholder and is
+// Rules baked in: no personal names, no results or metrics on these pages (delivery proof was
+// removed at the owner's request), pilot / design partner wording, never "live", "deployed" or
+// "customers". Pricing stays a placeholder and is
 // NOT rendered until approved (see PRICE_BAND_APPROVED).
 
 export const PRICE_BAND_PLACEHOLDER = "[PRICE BAND - TBD]";
 export const PRICE_BAND_APPROVED = false;
 
-export const DELIVERY_PROOF =
-  "We build quickly. We cut third-party software spend by 60-70% in 12 weeks for a software company group.";
-export const DELIVERY_PROOF_LABEL = "Past delivery, not a result for this product.";
 export const ILLUSTRATION_CAPTION = "Illustrative concept, sample data";
 
 export const DESIGN_PARTNER_BLURB =
@@ -32,7 +30,6 @@ export type Solution = {
   steps: string[];
   timeline: string;
   need: string[];
-  proofExtra: string;
   faqs: { q: string; a: string }[];
   /** Pricing FAQ, kept here with the placeholder; only rendered if PRICE_BAND_APPROVED. */
   pricingFaq: { q: string; a: string };
@@ -78,8 +75,6 @@ export const solutions: Solution[] = [
       "Your rate sheet",
       "One person to review drafts",
     ],
-    proofExtra:
-      "This is delivery proof, not a result for your shop. We will show your own sample results before you commit.",
     faqs: [
       { q: "Does it replace my estimator?", a: "No. It prepares the first draft; they approve." },
       {
@@ -131,7 +126,6 @@ export const solutions: Solution[] = [
       "System access (read/write to one workflow)",
       "One process owner",
     ],
-    proofExtra: "No claims about time saved until measured on your documents.",
     faqs: [
       {
         q: "Which systems?",
@@ -186,8 +180,6 @@ export const solutions: Solution[] = [
       "Templates per utility",
       "Access to your design/CRM tool",
     ],
-    proofExtra:
-      "No promised approval speed-ups; utilities control their own timelines.",
     faqs: [
       {
         q: "Do you submit to the utility?",
@@ -236,10 +228,6 @@ export const solutions: Solution[] = [
       "Sample data",
       "Agreement on privacy and data handling up front",
     ],
-    // Owner note in the copy ("a scientific advisor or credible partner is recommended before
-    // pushing this page publicly") is an internal note and is intentionally NOT rendered.
-    proofExtra:
-      "We do not make scientific claims; your scientists validate all outputs.",
     faqs: [
       {
         q: "Do you do the science?",
