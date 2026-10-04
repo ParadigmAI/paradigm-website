@@ -237,3 +237,58 @@ details > summary::-webkit-details-marker {
     display: none;
   }
 }
+
+/* ---------- Case study cards ---------- */
+.case-orb {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  box-shadow: 0 18px 36px -14px rgba(0, 78, 35, 0.4), inset 0 -6px 12px rgba(0, 0, 0, 0.08);
+  animation: case-bob 6s ease-in-out infinite;
+}
+.case-orb-a {
+  width: 76px;
+  height: 76px;
+  right: 28px;
+  top: 22px;
+  background: radial-gradient(circle at 34% 28%, #fff 0%, #abd49e 40%, #5db368 72%, #004e23 100%);
+}
+.case-orb-b {
+  width: 46px;
+  height: 46px;
+  right: 120px;
+  top: 46px;
+  background: radial-gradient(circle at 34% 28%, #fff 0%, #e2f5da 40%, #abd49e 100%);
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+.case-orb-c {
+  width: 30px;
+  height: 30px;
+  right: 182px;
+  top: 20px;
+  background: radial-gradient(circle at 34% 28%, #f4f4f1 0%, #abd49e 45%, #309d4b 100%);
+  animation-duration: 5s;
+  animation-delay: -1s;
+}
+.case-panel:not([hidden]) {
+  animation: case-fade 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mini-case .mini-dot {
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mini-case:hover .mini-dot {
+  transform: scale(1.8);
+}
+@keyframes case-bob {
+  50% { transform: translateY(-12px); }
+}
+@keyframes case-fade {
+  from { opacity: 0; transform: translateY(8px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-orb,
+  .case-panel {
+    animation: none !important;
+  }
+}

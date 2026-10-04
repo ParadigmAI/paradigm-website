@@ -10,7 +10,7 @@ GitHub Pages has no backend. The contact form posts to Formspree via `@formspree
 
 ## Rules that must hold
 - No personal names, personal photos, personal emails, employer references or personal social links anywhere (page, meta, JSON-LD, alt text, file names, comments, commits, package.json).
-- Only claims the owner confirmed. Numbers in use: audit 2 to 3 weeks; build 4 to 8 weeks; Skillful.ly >90% noise filtered and 70 to 80% efficiency; Awesome Motive 60 to 70% third-party spend reduction, delivered within 7 months.
+- Only claims the owner confirmed. Numbers in use: audit 2 to 3 weeks; build 4 to 8 weeks; Skillful.ly >90% noise filtered and 70 to 80% efficiency; Awesome Motive 60 to 70% third-party spend reduction, delivered in 12 weeks.
 - Not stated: team size or engineer count (owner decision), years in operation, delivery location, prices, PhD claims, client logos, client person names or photos.
 - Banned words: world-class, cutting-edge, revolutionary, seamless, leverage, synergy, unlock, game-changing. No em dashes.
 - Testimonials verbatim, title and company only. The Skillful.ly quote is trimmed to its first sentence.

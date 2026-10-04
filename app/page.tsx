@@ -2,6 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { ContactForm } from "@/components/ContactForm";
+import { CaseStudyCard } from "@/components/CaseStudyCard";
+import { caseStudies } from "@/lib/caseStudies";
 
 const MONTAA_URL = "https://miranthajayatilake.github.io/montaa/";
 
@@ -205,90 +207,18 @@ export default function Home() {
           <h2 className="h2">Work that changed how the business runs</h2>
 
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            <article className={card}>
-              <h3 className="h3">Skillful.ly</h3>
-              <dl className="mt-5 space-y-4 text-ink">
-                <div>
-                  <dt className="text-sm font-medium text-carbon">Problem</dt>
-                  <dd className="mt-1">
-                    Hiring teams were buried in candidates who were never going to be a fit, and
-                    building skills in new hires took too much time.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-medium text-carbon">What we built</dt>
-                  <dd className="mt-1">
-                    AI role-playing simulations. One model plays a real customer, another model
-                    critiques and refines its replies, so candidates and employees practise realistic
-                    situations that can be tailored by industry. We built all of the product&rsquo;s
-                    features and its simulation engine.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-medium text-carbon">Result</dt>
-                  <dd className="mt-1">
-                    <ul className="list-disc space-y-2 pl-5">
-                      <li>
-                        More than 90% of the noise in the candidate pool was filtered out by the
-                        simulations, so hiring teams spent their time on people worth meeting.
-                      </li>
-                      <li>
-                        In the learning and development stage after hire, teams using the platform
-                        ran 70 to 80% more efficiently.
-                      </li>
-                      <li>Skillful.ly has since been adopted by S&amp;P 500 companies.</li>
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-              <blockquote className="mt-6 border-l-2 border-verdant pl-4">
-                <p>
-                  &ldquo;Paradigm&rsquo;s expertise was pivotal in our journey into AI, propelling us
-                  forward at record speed.&rdquo;
-                </p>
-                <footer className="mt-2 text-sm text-ink">CEO/Co-founder, Skillful.ly, CA, USA</footer>
-              </blockquote>
-            </article>
-
-            <article className={card}>
-              <h3 className="h3">Awesome Motive</h3>
-              <dl className="mt-5 space-y-4 text-ink">
-                <div>
-                  <dt className="text-sm font-medium text-carbon">Problem</dt>
-                  <dd className="mt-1">
-                    Awesome Motive and the businesses in its portfolio were paying for a long list of
-                    third-party applications, and that spend kept adding to burn. The software was
-                    also built for the average customer, not for each business&rsquo;s own pain
-                    points.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-medium text-carbon">What we built</dt>
-                  <dd className="mt-1">
-                    In-house versions of the software they relied on, built from scratch, plus custom
-                    versions for their portfolio businesses. We also worked inside their teams to find
-                    each business&rsquo;s specific pain points and build calibrated AI solutions that
-                    fit how those teams work.
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-sm font-medium text-carbon">Result</dt>
-                  <dd className="mt-1">
-                    <ul className="list-disc space-y-2 pl-5">
-                      <li>Spend on third-party software reduced by 60 to 70%.</li>
-                      <li>Delivered within 7 months.</li>
-                      <li>Everything built is their IP.</li>
-                      <li>The applications run privately in their own cloud environments.</li>
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-            </article>
+            {caseStudies.map((cs) => (
+              <CaseStudyCard key={cs.name} cs={cs} />
+            ))}
           </div>
 
           <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {shortWork.map((w) => (
-              <li key={w.c} className={card + " !p-6"}>
+              <li
+                key={w.c}
+                className="mini-case group rounded-card border border-line bg-paper p-6 transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-growth hover:bg-sprout"
+              >
+                <span aria-hidden="true" className="mini-dot mb-3 block h-3 w-3 rounded-full bg-leaf" />
                 <h3 className="h3">{w.c}</h3>
                 <p className="mt-2 text-ink">{w.d}</p>
               </li>
@@ -352,8 +282,8 @@ export default function Home() {
                 across the portfolio.
               </p>
               <p className="mt-6 text-ink">
-                Awesome Motive: third-party software spend cut by 60 to 70%, delivered within 7
-                months.
+                Awesome Motive: third-party software spend cut by 60 to 70%, delivered in 12
+                weeks.
               </p>
               <TalkButton className="mt-8" />
             </div>
