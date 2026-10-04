@@ -17,7 +17,7 @@ Next.js App Router (TypeScript), static export (`output: "export"`, `trailingSla
 
 ## Rules for content
 - No personal names, photos, emails or social links anywhere (page, meta, JSON-LD, alt text, file names, comments).
-- Only claims that have been confirmed. Numbers in use: audit 2 to 3 weeks; build 4 to 8 weeks; Skillful.ly more than 90% of candidate noise filtered and teams 70 to 80% more efficient; Awesome Motive third-party spend cut 60 to 70%, delivered in 12 weeks. Not stated: team size, years in operation, location, prices.
+- Only claims that have been confirmed. Numbers in use: audit 2 to 3 weeks; build 4 to 8 weeks; Skillful.ly more than 90% of candidate noise filtered and teams 70 to 80% more efficient; Awesome Motive third-party spend cut 60 to 70%, delivered in 12 weeks. Not stated: team size, years in operation, location, prices. FAQ industries answer: work across industries, most work in software and SaaS, same approach for operations-heavy businesses.
 - Banned words: world-class, cutting-edge, revolutionary, seamless, leverage, synergy, unlock, game-changing. No em dashes.
 - Testimonials are verbatim, title and company only.
 - Awesome Motive is not PE-owned. Case studies carry no external links. Montaa is pre-launch: no launch language, customers or results.

@@ -127,7 +127,7 @@ const faqs = [
   },
   {
     q: "What industries do you work in?",
-    a: "We work across industries, because the workflow matters more than the sector. Most of our work so far is in software and SaaS, and we are focused on services, distribution, healthcare administration, insurance and logistics.",
+    a: "We work across industries, because the workflow matters more than the sector. Most of our work so far is in software and SaaS, and the same approach applies to any operations-heavy business.",
   },
   {
     q: "What do we need from you?",
