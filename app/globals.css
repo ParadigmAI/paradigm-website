@@ -178,12 +178,12 @@ details > summary::-webkit-details-marker {
 }
 .aurora-word {
   display: inline-block;
-  animation: aurora-word 0.9s cubic-bezier(0.23, 1, 0.32, 1) backwards;
-  animation-delay: calc(var(--w) * 70ms + 150ms);
+  animation: aurora-word 0.6s cubic-bezier(0.23, 1, 0.32, 1) backwards;
+  animation-delay: calc(var(--w) * 40ms);
 }
 .aurora-rise {
-  animation: aurora-rise 0.9s cubic-bezier(0.23, 1, 0.32, 1) backwards;
-  animation-delay: calc(var(--i) * 120ms + 150ms);
+  animation: aurora-rise 0.7s cubic-bezier(0.23, 1, 0.32, 1) backwards;
+  animation-delay: calc((var(--i) - 3) * 100ms);
 }
 
 @keyframes aurora-fade {
