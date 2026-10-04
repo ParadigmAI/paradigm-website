@@ -1,4 +1,4 @@
-const HEADLINE = "AI that cuts cost and adds revenue inside your business";
+const HEADLINE = "Your best people shouldn't be doing copy-paste.";
 
 const blobs = [
   { cls: "left-[-120px] top-10 h-[520px] w-[520px]", bg: "#abd49e", x1: "120px", y1: "60px", x2: "40px", y2: "-40px", t: "19s", o: 0.75 },
@@ -49,8 +49,8 @@ export function Hero() {
           className="aurora-rise mx-auto mt-5 max-w-2xl text-lg text-ink"
           style={{ "--i": 6 } as React.CSSProperties}
         >
-          We find the AI use case worth doing first, build it into your operations at a fixed
-          price, and hand over everything we make.
+          We find the slow, repetitive work holding your team back and build AI that takes it on,
+          inside your own operations. Built in weeks, at a fixed price.
         </p>
         <div
           className="aurora-rise mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
