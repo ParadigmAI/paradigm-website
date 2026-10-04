@@ -56,11 +56,14 @@ function SolutionsMenu() {
         <svg
           width="14"
           height="14"
-          viewBox="0 0 12 12"
+          viewBox="0 0 14 14"
           aria-hidden="true"
           className="plus-icon transition-transform duration-300 ease-out group-hover/sol:rotate-45 group-hover/plus:rotate-45 group-aria-expanded/plus:rotate-45"
         >
-          <path d="M6 1.2v9.6M1.2 6h9.6" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
+          <path
+            d="M7.93333 0V4.06667C7.93333 5.17124 8.82876 6.06667 9.93333 6.06667H14V7.93333H9.93333C8.82876 7.93333 7.93333 8.82876 7.93333 9.93333V14H6.06667V9.93333C6.06667 8.82876 5.17124 7.93333 4.06667 7.93333H0V6.06667H4.06667C5.17124 6.06667 6.06667 5.17124 6.06667 4.06667V0H7.93333Z"
+            fill="currentColor"
+          />
         </svg>
       </button>
       {open && (
