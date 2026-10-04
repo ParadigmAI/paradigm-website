@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Orbs } from "@/components/Orbs";
+import { Hero } from "@/components/Hero";
 import { ContactForm } from "@/components/ContactForm";
 
 const MONTAA_URL = "https://miranthajayatilake.github.io/montaa/";
@@ -141,26 +141,7 @@ export default function Home() {
       <Header />
       <main id="main">
         {/* 1. Hero */}
-        <section id="top" className="bg-canvas">
-          <div className="mx-auto max-w-6xl px-4 pb-20 pt-16 text-center sm:px-6 md:pb-24 md:pt-24">
-            <h1 className="h1 mx-auto max-w-3xl">
-              AI that cuts cost and adds revenue inside your business
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-lg text-ink">
-              We find the AI use case worth doing first, build it into your operations at a fixed
-              price, and hand over everything we make.
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <TalkButton />
-              <a href="/#work" className="btn btn-ghost">
-                See our work
-              </a>
-            </div>
-            <div className="mt-14">
-              <Orbs />
-            </div>
-          </div>
-        </section>
+        <Hero />
 
         {/* 2. Problem */}
         <Section id="problem">
