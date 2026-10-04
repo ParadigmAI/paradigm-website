@@ -18,8 +18,8 @@ GitHub Pages has no backend. The contact form posts to Formspree via `@formspree
 - Montaa is pre-launch. No launch language, no customers, no results.
 - No email address is shown on the site.
 
-## Booking link
-`BOOKING_URL` in `lib/site.ts` is empty until the owner supplies a Google Calendar appointment scheduling link. While empty, all "Book a call" buttons go to `/#contact`.
+## Calls to action
+There is no booking link (owner decision). Every "Talk to our team" button goes to the contact form at `/#contact`, which posts to Formspree. The first call with a visitor is arranged by reply.
 
 ## Navigation
 Internal links are absolute (`/#section`, `/privacy/`) so they work from legal pages.

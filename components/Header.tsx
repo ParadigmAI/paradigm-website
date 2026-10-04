@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { bookExternal, bookHref } from "@/lib/site";
 
 const links = [
   { href: "/#services", label: "What we do" },
@@ -28,12 +27,8 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <a
-            href={bookHref}
-            {...(bookExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="btn btn-primary hidden !h-10 sm:inline-flex"
-          >
-            Book a call
+          <a href="/#contact" className="btn btn-primary hidden !h-10 sm:inline-flex">
+            Talk to our team
           </a>
           <button
             type="button"
@@ -62,12 +57,11 @@ export function Header() {
             ))}
             <li className="pt-2">
               <a
-                href={bookHref}
-                {...(bookExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                href="/#contact"
                 className="btn btn-primary w-full"
                 onClick={() => setOpen(false)}
               >
-                Book a call
+                Talk to our team
               </a>
             </li>
           </ul>

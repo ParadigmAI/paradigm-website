@@ -2,18 +2,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Orbs } from "@/components/Orbs";
 import { ContactForm } from "@/components/ContactForm";
-import { bookExternal, bookHref } from "@/lib/site";
 
 const MONTAA_URL = "https://miranthajayatilake.github.io/montaa/";
 
-function BookButton({ className = "" }: { className?: string }) {
+function TalkButton({ className = "" }: { className?: string }) {
   return (
-    <a
-      href={bookHref}
-      {...(bookExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`btn btn-primary ${className}`}
-    >
-      Book a call
+    <a href="/#contact" className={`btn btn-primary ${className}`}>
+      Talk to our team
     </a>
   );
 }
@@ -156,7 +151,7 @@ export default function Home() {
               price, and hand over everything we make.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <BookButton />
+              <TalkButton />
               <a href="/#work" className="btn btn-ghost">
                 See our work
               </a>
@@ -379,7 +374,7 @@ export default function Home() {
                 Awesome Motive: third-party software spend cut by 60 to 70%, delivered within 7
                 months.
               </p>
-              <BookButton className="mt-8" />
+              <TalkButton className="mt-8" />
             </div>
             <ul className="space-y-5">
               <li className={card}>
@@ -454,13 +449,9 @@ export default function Home() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="h2">Tell us the one process that costs you the most time.</h2>
             <p className="mt-4 text-lg text-ink">We will tell you in 30 minutes if AI can fix it.</p>
-            <BookButton className="mt-8" />
           </div>
-          <div className="mx-auto mt-14 max-w-2xl rounded-card border border-line bg-paper p-6 sm:p-8">
-            <h3 className="h3">Prefer to write? Send a note.</h3>
-            <div className="mt-6">
-              <ContactForm />
-            </div>
+          <div className="mx-auto mt-10 max-w-2xl rounded-card border border-line bg-paper p-6 sm:p-8">
+            <ContactForm />
           </div>
         </Section>
       </main>
