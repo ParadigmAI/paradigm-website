@@ -66,13 +66,6 @@ export function ContactForm() {
         <ValidationError field="message" prefix="Message" errors={state.errors} className="mt-1 block text-sm text-red-700" />
       </div>
 
-      <p className="text-sm text-ink">
-        <span aria-hidden="true" className="text-forest">
-          *
-        </span>{" "}
-        Required
-      </p>
-
       {/* Spam trap: hidden from people, bots tend to fill it in. */}
       <input
         type="text"
