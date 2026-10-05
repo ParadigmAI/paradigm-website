@@ -178,6 +178,33 @@ const mocks: Record<MockKind, { el: React.ReactNode; alt: string }> = {
   },
 };
 
+export function FlowSteps({ steps }: { steps: string[] }) {
+  return (
+    <figure>
+      <ol
+        aria-label={`Example flow (${ILLUSTRATION_CAPTION})`}
+        className="flex flex-col gap-3 md:flex-row md:items-stretch md:gap-0"
+      >
+        {steps.map((s, i) => (
+          <li
+            key={s}
+            className="relative flex flex-1 items-center gap-3 rounded-xl border border-line bg-paper px-4 py-3 text-sm md:mx-0 md:rounded-none md:first:rounded-l-xl md:last:rounded-r-xl md:[&:not(:first-child)]:border-l-0"
+          >
+            <span
+              aria-hidden="true"
+              className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-xs font-medium text-white"
+            >
+              {i + 1}
+            </span>
+            <span>{s}</span>
+          </li>
+        ))}
+      </ol>
+      <figcaption className="mt-2 text-xs text-ink">{ILLUSTRATION_CAPTION}</figcaption>
+    </figure>
+  );
+}
+
 export function ExampleFlow({
   intro,
   steps,
@@ -192,28 +219,9 @@ export function ExampleFlow({
     <div className="mt-10">
       <p className="text-ink">{intro}</p>
 
-      <figure className="mt-4">
-        <ol
-          aria-label={`Example flow (${ILLUSTRATION_CAPTION})`}
-          className="flex flex-col gap-3 md:flex-row md:items-stretch md:gap-0"
-        >
-          {steps.map((s, i) => (
-            <li
-              key={s}
-              className="relative flex flex-1 items-center gap-3 rounded-xl border border-line bg-paper px-4 py-3 text-sm md:mx-0 md:rounded-none md:first:rounded-l-xl md:last:rounded-r-xl md:[&:not(:first-child)]:border-l-0"
-            >
-              <span
-                aria-hidden="true"
-                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-forest text-xs font-medium text-white"
-              >
-                {i + 1}
-              </span>
-              <span>{s}</span>
-            </li>
-          ))}
-        </ol>
-        <figcaption className="mt-2 text-xs text-ink">{ILLUSTRATION_CAPTION}</figcaption>
-      </figure>
+      <div className="mt-4">
+        <FlowSteps steps={steps} />
+      </div>
 
       <figure className="mt-8">
         <div role="img" aria-label={m.alt} className="rounded-2xl bg-sand p-4 sm:p-5">

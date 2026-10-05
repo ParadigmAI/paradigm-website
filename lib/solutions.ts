@@ -1,11 +1,6 @@
-// Solutions section copy. Source: owner's "Solutions section copy" file (v1 + v2 addendum).
-// Rules baked in: no personal names, no results or metrics on these pages (delivery proof was
-// removed at the owner's request), pilot / design partner wording, never "live", "deployed" or
-// "customers". Pricing stays a placeholder and is
-// NOT rendered until approved (see PRICE_BAND_APPROVED).
-
-export const PRICE_BAND_PLACEHOLDER = "[PRICE BAND - TBD]";
-export const PRICE_BAND_APPROVED = false;
+// Solutions section copy. Source: owner's copy files (v1, v2 addendum, Quoteline spec).
+// Rules baked in: no personal names, no results or metrics on these pages, pilot / design
+// partner wording, never "live", "deployed" or "customers". No prices or price placeholders.
 
 export const ILLUSTRATION_CAPTION = "Illustrative concept, sample data";
 
@@ -15,7 +10,7 @@ export const DESIGN_PARTNER_BLURB =
 export type MockKind = "rfq" | "invoice" | "packet" | "pipeline";
 
 export type Solution = {
-  slug: "job-shops" | "logistics" | "solar-installers" | "biotech-data";
+  slug: "quoteline" | "logistics" | "solar-installers" | "biotech-data";
   indexable: boolean;
   /** Product-style name used in the menu, cards, footer and breadcrumbs. */
   name: string;
@@ -34,65 +29,66 @@ export type Solution = {
   timeline: string;
   need: string[];
   faqs: { q: string; a: string }[];
-  /** Pricing FAQ, kept here with the placeholder; only rendered if PRICE_BAND_APPROVED. */
-  pricingFaq: { q: string; a: string };
   ctaLine: string;
 };
 
 export const solutions: Solution[] = [
   {
-    slug: "job-shops",
+    slug: "quoteline",
     indexable: true,
     name: "Quoteline",
-    industry: "Job shops and machine shops",
-    cardText: "Turn RFQ emails and drawings into draft quotes in minutes.",
-    seoTitle: "RFQ to Quote Automation for Job Shops | Paradigm",
+    industry: "job shops, sign and print shops, caterers and other custom-order businesses",
+    cardText: "Turn quote requests from email, forms and messages into draft quotes in minutes.",
+    seoTitle: "Quote Request Automation for Job Shops, Sign Shops and Caterers | Paradigm",
     metaDescription:
-      "Draft quotes from RFQ emails and drawings in minutes. A person approves every quote.",
-    headline: "Quote more RFQs without hiring another estimator.",
+      "Quoteline gathers quote requests from email, web forms and messages and drafts the quote for you to approve. Nothing goes out without a person.",
+    headline: "Answer every quote request fast, without a bigger back office.",
     problems: [
-      "RFQs sit in my inbox for days.",
-      "Our best estimator is the bottleneck.",
-      "We lose jobs because we quote too slowly.",
+      "Requests come in by email, text and DMs and I lose track.",
+      "I spend my evenings typing quotes.",
+      "By the time I reply, they have gone with someone else.",
     ],
     build:
-      "An assistant that reads incoming RFQ emails and attachments, pulls out part details, quantities, materials and deadlines, and drafts a quote in your format using your own rates and past quotes. Your estimator reviews and approves. Nothing goes to a customer without a person.",
-    flowIntro: "How an RFQ could move through the system:",
+      "Quoteline collects quote requests from your email, web forms and text messages (WhatsApp and Instagram messages can be connected as add-ons). It pulls out what the customer wants, such as items, quantities, dates, specs and attachments, and drafts a priced quote in your format using your own price list and past quotes. Nothing goes to a customer without a person approving it.",
+    flowIntro: "How a quote request could move through Quoteline:",
     flow: [
-      "RFQ email arrives",
-      "Reads attachments and drawing notes",
-      "Extracts part, material, quantity, due date",
-      "Drafts quote from your rate sheet",
-      "Estimator reviews and approves",
+      "Request arrives (email, form, text)",
+      "Details pulled out",
+      "Priced from your own rates and past quotes",
+      "You review and approve",
       "Quote sent",
     ],
+    // Unused for Quoteline: its page renders its own request-and-quote visuals (QuotelinePage).
     mock: "rfq",
     steps: [
-      "Week 1: we review 20-30 of your past RFQs and quotes.",
-      "Weeks 2-4: we build the draft-quote flow in your email and quoting tool.",
-      "Weeks 4-6: run side by side with your estimator, tune it, then start a pilot.",
+      "Week 1: we review 20 to 30 of your past quotes and your price list.",
+      "Weeks 2 to 4: we build the draft-quote flow on your email and quoting tool.",
+      "Weeks 4 to 6: we run it beside you, tune it, and start a pilot.",
     ],
     timeline: "4 to 6 weeks (target, depends on how clean your history is).",
     need: [
-      "Sample RFQs",
+      "A sample of past quote requests",
       "Past quotes",
-      "Your rate sheet",
+      "Your price list or rate sheet",
       "One person to review drafts",
     ],
     faqs: [
-      { q: "Does it replace my estimator?", a: "No. It prepares the first draft; they approve." },
+      { q: "Does it send quotes itself?", a: "No, not unless you choose that later." },
       {
-        q: "What about complex drawings?",
-        a: "We start with the simple, repeat parts and flag the rest for a person.",
+        q: "Does it replace my estimator or me?",
+        a: "No. It prepares the first draft and you approve.",
+      },
+      {
+        q: "Which channels?",
+        a: "Email, web form and text first. WhatsApp and Instagram can be added.",
       },
       { q: "Who owns it?", a: "You own what we build for you." },
       {
-        q: "Does it send quotes itself?",
-        a: "No, not unless you choose that later.",
+        q: "What about unusual requests?",
+        a: "It flags what it is unsure about and leaves those to you.",
       },
     ],
-    pricingFaq: { q: "Pricing", a: PRICE_BAND_PLACEHOLDER },
-    ctaLine: "Send us three recent RFQs and we will show a draft quote.",
+    ctaLine: "Become a design partner",
   },
   {
     slug: "logistics",
@@ -145,7 +141,6 @@ export const solutions: Solution[] = [
         a: "Your documents stay in your environment or a private setup we agree on.",
       },
     ],
-    pricingFaq: { q: "Pricing", a: PRICE_BAND_PLACEHOLDER },
     ctaLine: "Talk to our team to map one paperwork process.",
   },
   {
@@ -196,7 +191,6 @@ export const solutions: Solution[] = [
         a: "Start with your top utilities; we confirm coverage on the call.",
       },
     ],
-    pricingFaq: { q: "Pricing", a: PRICE_BAND_PLACEHOLDER },
     ctaLine: "Talk to our team and bring one recent packet.",
   },
   {
@@ -245,7 +239,6 @@ export const solutions: Solution[] = [
         a: "Work happens under your NDA and in your environment.",
       },
     ],
-    pricingFaq: { q: "Pricing", a: PRICE_BAND_PLACEHOLDER },
     ctaLine: "Talk to our team to scope one data question.",
   },
 ];
@@ -265,7 +258,6 @@ export const solutionsIndex = {
   ctaLine: "Not sure which fits? Talk to our team.",
 };
 
-export const faqsFor = (s: Solution) =>
-  PRICE_BAND_APPROVED ? [...s.faqs, s.pricingFaq] : s.faqs;
+export const faqsFor = (s: Solution) => s.faqs;
 
 export const getSolution = (slug: string) => solutions.find((s) => s.slug === slug);

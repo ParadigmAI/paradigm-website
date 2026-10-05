@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SolutionPage } from "@/components/SolutionPage";
+import { QuotelinePage } from "@/components/QuotelinePage";
 import { getSolution, solutions } from "@/lib/solutions";
 
 export const dynamicParams = false;
@@ -36,5 +37,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const s = getSolution(slug);
   if (!s) notFound();
+  if (s.slug === "quoteline") return <QuotelinePage s={s} />;
   return <SolutionPage s={s} />;
 }

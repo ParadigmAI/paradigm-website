@@ -44,12 +44,34 @@ export default function SolutionsIndex() {
         </section>
 
         <PageSection>
-          <ul className="grid gap-5 md:grid-cols-2">
-            {solutions.map((s) => (
+          {solutions.slice(0, 1).map((s) => (
+            <a
+              key={s.slug}
+              href={`/solutions/${s.slug}/`}
+              className="group relative block overflow-hidden rounded-[20px] bg-gradient-to-br from-[#004e23] to-[#00311a] p-8 text-white transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_0_0_1px_#5db368,0_24px_60px_-24px_rgba(48,157,75,0.7)] sm:p-10"
+            >
+              <span aria-hidden="true" className="case-orb case-orb-a" />
+              <span aria-hidden="true" className="case-orb case-orb-b" />
+              <span aria-hidden="true" className="case-orb case-orb-c" />
+              <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-[#abd49e]">
+                Lead solution
+              </span>
+              <p className="mt-5 max-w-xl text-sm text-[#cfe6c8]">
+                For {s.industry.toLowerCase()}
+              </p>
+              <h2 className="mt-1 font-display text-4xl font-medium leading-tight">{s.name}</h2>
+              <p className="mt-3 max-w-2xl text-lg text-[#cfe6c8]">{s.cardText}</p>
+              <span className="mt-6 inline-block text-sm font-medium text-[#abd49e] group-hover:underline">
+                See what we build
+              </span>
+            </a>
+          ))}
+          <ul className="mt-5 grid gap-5 md:grid-cols-3">
+            {solutions.slice(1).map((s) => (
               <li key={s.slug}>
                 <a
                   href={`/solutions/${s.slug}/`}
-                  className="group block h-full rounded-card border border-line bg-paper p-6 transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-growth hover:bg-sprout sm:p-8"
+                  className="group block h-full rounded-card border border-line bg-paper p-6 transition-[background-color,border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-growth hover:bg-sprout"
                 >
                   <span aria-hidden="true" className="mini-dot mb-4 block h-3 w-3 rounded-full bg-leaf" />
                   <p className="text-sm text-ink">For {s.industry.toLowerCase()}</p>
